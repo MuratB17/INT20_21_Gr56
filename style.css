@@ -7,7 +7,7 @@ body{
 
 .navbar ul {
     list-style: none;
-    background: #bd1e43;
+    background: #291ebd;
     padding:0;
     margin:0;
     text-align: right;
@@ -17,7 +17,7 @@ body{
 }
 .navbar a {
     text-decoration: none;
-    colot:#fff;
+    color:#fff;
     width: 80px; 
     display: block;
     padding: 25px 20px; 
@@ -29,4 +29,20 @@ body{
 }
 .navbar a:hover{
     background:#353640 ;
+}
+#emri
+{
+background-color:white;
+width: 200px;
+height: 100px;
+opacity:0.8;
+
+}
+#logo
+{
+width:200px;
+height: 100px;
+border-radius:35px;
+float:center;
+
 }
