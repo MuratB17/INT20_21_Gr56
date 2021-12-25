@@ -1,0 +1,21 @@
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+ address{
+    margin: 40px;
+    font-size: 20px;
+    color: green ;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin:40px ;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}

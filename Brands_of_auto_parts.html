@@ -11,6 +11,21 @@
     overflow: hidden;
     margin-top: -6px;
 }
+
+ a.links:hover{
+    color:red;
+  }
+
+a.links:visited{
+  color: green;
+}
+a.links:hover{
+  color: hotpink;
+}
+a.links:active{
+  color: blue;
+}
+
     
        </style>
 </head>
@@ -104,6 +119,63 @@ td, th {
   </tr>
 </table>
 <p style="font-size:40px;"><bold>For more info about the top brands of auto parts</bold> 
-<a href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/" target="_blank">click on the link</a> </p>
+<a class="links"  href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/" target="_blank">click on the link</a> </p>
+<div style="text-align: center; font-size: 20px;"><p>Choose your brand</p>
+
+<form action="/action_page.php">
+  <input list="Brand" name="Brand">
+  <datalist id="Brand">
+    <option value="Valeo">
+    <option value="Castrol">
+    <option value="Aldeco">
+    <option value="Febi Bilstein">
+    <option value="Monreo">
+    <option value="Continental Ag">
+    <option value="Bosch">
+    <option value="Man-Filter">
+  </datalist>
+  <input type="submit">
+</form>
+</div>
+
+
+<style>
+#div1, #div2 {
+  float: left;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="Images/car-parts.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="390" height="195">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
 </body>
 </html>
