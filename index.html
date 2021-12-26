@@ -9,7 +9,7 @@
     height: 46px;
     border-radius: 50%;
     overflow: hidden;
-    margin-top: -6px;
+    margin-top: 6px;
 }
 h.uppercase{
     text-transform: uppercase;
@@ -19,14 +19,36 @@ h.uppercase{
 h2.outset {border-style: outset;} 
 h1.solid {border-style: solid;
           text-align: center;
+          outline: 4px solid rgb(47, 0, 255);
+  outline-offset: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 p {
   border: 2px solid black;
-  outline: #2a0fc4 solid 10px;
+  
   margin: auto;  
   padding: 10px;
   text-align: center;
+  resize: horizontal;
+  overflow: auto;
 }
+h2 {
+        width: 100%;
+        animation-name: text;
+        animation-duration: 2s;
+        animation-iteration-count:1 ;}
+        #one {
+        animation-direction: normal;
+    }
+    @keyframes text {
+        from {
+            margin-left: 60%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
 
        </style>
 </head>
@@ -56,7 +78,7 @@ p {
     
 <body>
 <h1 class="solid">What are the parts of a car ?</h1>
-<h2  class="outset" class="uppercase">The Steering Wheel is Connected to the...</h2>
+<h2 id="one" class="outset" class="uppercase">The Steering Wheel is Connected to the...</h2>
 <p>
     
 <br>From the steering system to the front and rear suspension, a gas-powered vehicle is filled
@@ -64,7 +86,7 @@ p {
   having a working understanding of how the steering and suspension systems relate to the other parts of your vehicle
    is extremely helpful in visualizing how your vehicle functions.</br>
 </p>
-<h1><mark style="color: seagreen;background-color: rgb(60, 31, 139)";>Putting it all Together</mark></h1>
+<h1 style="margin-left: 50px;"><mark style="color: seagreen;background-color: rgb(51, 31, 139  )";>Putting it all Together</mark></h1>
 <img src="Images/car-parts-diagram.jpg" width="660" height="400">
 <ol>
     <li>Engine

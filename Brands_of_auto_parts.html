@@ -73,7 +73,8 @@ td, th {
 </head>
 <body>
 
-<h2 style="text-align: center; font-size: 50px;">Top Brands of Auto Parts</h2>
+<h2 style="text-align: center; font-size: 50px;  color: white;
+text-shadow: 2px 2px 4px #000000;">Top Brands of Auto Parts</h2>
 
 <table>
   <tr>
@@ -81,12 +82,12 @@ td, th {
     <th>Logo</th>
   <tr>
     <td> ACDELCO</td>
-    <td><img src="Images/aldeco.png" alt="Aldeco" style="width:300px;height:150px;"></td>
+    <td><img src="Images/aldeco.png" alt="Aldeco" style="width:300px;height:150px; border-radius: 50px / 15px;"></td>
     
   </tr>
   <tr>
     <td>FEBI BILSTEIN</td>
-    <td><img src="Images/FEBI BILSTEIN.png" alt="Febi Bilstein" style="width:300px;height:150px;"></td>
+    <td><img src="Images/FEBI BILSTEIN.png" alt="Febi Bilstein" style="width:300px;height:150px; "></td>
     
   </tr>
   <tr>
@@ -140,6 +141,14 @@ td, th {
 
 
 <style>
+  @font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+* {
+   font-family: myFirstFont;
+}
 #div1, #div2 {
   float: left;
   width: 400px;
@@ -168,14 +177,17 @@ function drop(ev) {
 <body>
 
 <h2>Drag and Drop</h2>
-<p>Drag the image back and forth between the two div elements.</p>
+<p id="demo"></p>
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
   <img src="Images/car-parts.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="390" height="195">
 </div>
 
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+<script>
+  let text = "Drag the image back and forth between the two div elements &colon;";
+  document.getElementById("demo").innerHTML = text; 
+  </script>
 
 </body>
 </html>

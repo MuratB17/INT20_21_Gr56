@@ -17,7 +17,9 @@ body{
   background-size: 300px 200px;
   background-position:right  ;
   background-attachment:scroll;
+  
 }
+
 </style>
        <body>
         <div id="emri">
@@ -67,7 +69,7 @@ body{
       <source src="Imagesaudio.mp3" type="audio/mpeg">
     
     </audio>
-    <h2>Sorting of auto parts</h2>
+    </h2>
     <li style="color: red;margin: 40px;">Auto parts are sort:
         <ul>
           <li>Front parts</li>
@@ -77,9 +79,9 @@ body{
 <h2>Description of brands of auto parts</h2>
       <dl style="color: red;margin: 40px;">
         <dt>Name</dt>
-        <dd>-you can know about name of brands</dd>
+        <dd>&ndash;you can know about name of brands</dd>
         <dt>Logo</dt>
-        <dd>-you can know about logo of brands</dd>
+        <dd>&ndash;you can know about logo of brands</dd>
       </dl>
       <br>
       <h1>Go at Auto Parts Website <a href="#logo">click here</a></h1>
@@ -96,7 +98,7 @@ body{
         Send email <a href="muratberisha7@gmail.com">here</a>
         </address>
         <table style="width:60%">
-            <caption style="font-size: 30px;">Time for work</caption>
+            <caption style="font-size: 30px;">Time for work &frasl; pause</caption>
             <tr>
               <th>Day</th>
               <th>Hour</th>
@@ -110,5 +112,8 @@ body{
               <td>Close</td>
             </tr>
           </table>
+          <button style="margin-left: 50px; font-size: 30px;" onclick="document.getElementById('demo').innerHTML=Date()">The time now is</button>
+
+<p id="demo"></p>
 </body>
 </html>
