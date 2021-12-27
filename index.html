@@ -50,7 +50,19 @@ h2 {
         }
     }
 
-    
+    .replace
+    {
+        text-align: center;
+    }
+    #grad1
+            {
+                height:200px;
+                background: linear-gradient(rgb(68, 0, 255),rgb(0, 255, 157));
+            
+            }
+            a{
+            color: rgb(250, 250, 253);
+            }
        </style>
 </head>
        <body>
@@ -157,12 +169,26 @@ emissions before they leave the carvs exhaust system.</br>
 Systems can vary, but they usually are made up of shocks, coil springs, ball joints, control arms and CV joints.</br>
             </li>
         </ol>
-        <h1 style="text-align: center;"> I have a game click to   <a href="Game.html">try it</a></h1>
+        <div id="grad1">
 
+         <h1 style="text-align: center;"> I have a game click to   <a href="Game.html">try it</a></h1>
+<div class="replace">
+        <h3>Try the game:</h3>
+
+        <button onclick="myFunction()">Try it</button>
         
+        <h3 id="play">Why you don't try  the game</h3>
         
+        <script>
+        function myFunction() {
+          let text = document.getElementById("play").innerHTML; 
+          document.getElementById("play").innerHTML =
+          text.replace("try","play");
+        }
+        </script>
      
    
-
+    </div>
+</div> 
 </body>
 </html>

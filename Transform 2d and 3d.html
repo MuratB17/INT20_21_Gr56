@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+          
+             @font-face {
+   font-family: myFirstFont;
+   src: url(sansation_bold.woff);
+   font-weight: bold;
+}
+
+* {
+   font-family: myFirstFont;
+}
+             
+            .normal_div {
+                width: 300px;
+                height: 150px;
+                color: white;
+                font-size:25px;
+                background-color: green;
+                border: 1px solid black;
+                margin-bottom:20px;
+                
+                
+            }
+              
+            #rotateX {
+                width: 300px;
+                height: 150px;
+                color: white;
+                font-size:25px;
+                background-color: green;
+                border: 1px solid black;
+                transform: rotateX(180deg); 
+                  
+            }
+            #rotateY {
+                width: 200px;
+                color:white;
+                font-size:25px;
+                height: 100px;
+                background-color: green;
+                border: 1px solid black;
+                transform: rotateY(100deg); 
+            }
+            #rotateZ {
+                width: 200px;
+                height: 100px;
+                color:white;
+                font-size:25px;
+                background-color: green;
+                border: 1px solid black;
+                transform: rotateZ(90deg); 
+            }
+            .gfg {
+                font-size:40px;
+                font-weight:bold;
+                color:#090;
+            }
+            .rotatione {
+                font-size:25px;
+                font-weight:bold;
+                margin:20px 0;
+            }
+        </style>
+   
+</head>
+<body>
+    
+
+
+    <title>2D Transform</title>
+    <style>
+    
+
+    
+     img {
+        border: 1px solid black;
+    }
+     
+    img:hover {
+         
+         
+        transform: translate(100px, 100px);
+    }
+   .rotate img {
+        border: 1px solid black;
+    }
+     
+   .rotate img:hover {
+         
+     transform: rotate(-20deg);
+    }
+    .Scale img {
+        border: 1px solid black;
+    }
+     
+   .Scale img:hover {
+         
+    transform: scale(1,2);
+}
+    .Skew img {
+        border: 1px solid black;
+    }
+     
+   .Skew img:hover {
+         
+    transform: skew(20deg, 10deg);
+    }
+   
+   
+    
+ 
+    .rotation {
+        font-size: 25px;
+        text-align: left;
+        margin-top: 100px;
+    }
+    .position{
+        column-count: 2;
+    }
+    </style>
+</head>
+ 
+<body>
+    <div class="position">
+    <h1>Transform 2d</h1>
+    <div class="rotation">Translate() Method</div>
+        <img  src="Images/auto-parts-logo.png"
+             alt="Logo" />
+           
+             <div class="rotation">Scale() Method</div>
+             <div class="Scale"> <img  src="Images/auto-parts-logo.png"
+                  alt="Logo" /></div>
+
+                  <div class="rotation">Rotate() Method</div>
+                  <div class="rotate"> <img  src="Images/auto-parts-logo.png"
+                       alt="Logo" /></div>
+
+                       <div class="rotation">Skew() Method</div>
+<div class="Skew"><img  src="Images/auto-parts-logo.png"
+                            alt="Logo" /></div>
+
+                            <h1>Transform 3d</h1>
+                
+                                <div class = "gfg">Auto Parts</div>
+                                <div class = "rotatione">rotateX() Method</div>
+                                <div class = "normal_div"> Best car is BMW</div>
+                                <div id="rotateX">Best car is BMW</div>
+
+                                <div class = "gfg">Auto Parts</div>
+                                <div class = "rotatione">rotateY() Method</div>
+                                <div class = "normal_div"> Best car is BMW </div>
+                                <div id="rotateY">Best car is BMW</div>
+
+                                <div class = "gfg">Auto Parts</div>
+                                <div class = "rotatione">rotateZ() Method</div>
+                                <div class = "normal_div"> Best car is BMW </div>
+                                <div id="rotateZ">Best car is BMW</div>
+                            </div>
+                        
+                                      
+</body>
+ 
+</html>
