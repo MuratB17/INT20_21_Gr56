@@ -11,7 +11,6 @@ window.onload = function() {
         ctx.arc(75,75,50,0,Math.PI*2,true); 
         ctx.closePath();
         ctx.fill();
-        
         ctx.strokeStyle="#2a2a34"; //stroke color
         
         //smile

@@ -58,6 +58,7 @@ table {
   width: 80%;
   border-spacing: 30px;
   margin: 50px;
+  
 }
 
 td, th {
@@ -68,19 +69,47 @@ td, th {
   
 }
 
-
+.tr{
+  text-align: center;
+}
+#kk{
+  margin: 50px;
+  font-size: 20px;
+}
 </style>
 </head>
 <body>
+  <div id="kk">
   <h1>What Brands of Auto Parts are most popular in world</h1>
 <section><p>There are many companies that produce auto parts, and this is understandable,
    given the huge needs of an increasingly technologically advanced and modern automobile production.</p></section>
- <section> <p>And yet, among this multitude of companies, there are several that stand out from the rest.
+ <article> <p>And yet, among this multitude of companies, there are several that stand out from the rest.
     Some of them manufacture and offer a wide range of automotive parts and components,
      while others have focused on one or more automotive components. However, all of them have one thing in common - 
      their products are in demand because of their high quality and high reliability.
-  </p></section>
- 
+  </p></article>
+  <p>The Top three car:</p>
+
+<p id="de"></p>
+
+<script>
+const cars = ["Audi", "Mercedes", "BMW"];
+document.getElementById("de").innerHTML = cars;
+</script>
+
+<p>Check the every age at the array > 18 :{ 32,33,16,40 }</p>
+        <p id="chk"></p>
+
+        <script>
+        const ages = [32, 33, 16, 40];
+        document.getElementById("chk").innerHTML = ages.every(checkAge);
+        
+        function checkAge(age) {
+          return age > 18;
+        }
+        </script>
+        
+      </div>
 
 <h2 style="text-align: center; font-size: 50px;  color: white;
 text-shadow: 2px 2px 4px #000000;">Top Brands of Auto Parts</h2>
@@ -129,7 +158,10 @@ text-shadow: 2px 2px 4px #000000;">Top Brands of Auto Parts</h2>
   </tr>
 </table>
 <p style="font-size:40px;"><bold>For more info about the top brands of auto parts</bold> 
-<a class="links"  href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/" target="_blank">click on the link</a> </p>
+<a class="links"  href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/" target="_blank">click on the link</a> 
+
+
+</p>
 <div style="text-align: center; font-size: 20px;"><p>Choose your brand</p>
 
 <form action="/action_page.php">
@@ -186,6 +218,9 @@ function drop(ev) {
 </div>
 
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="tr">
+<h2>Transform 2d and 3d and manipulation with number</h2>
+<a href="Transform 2d and 3d.html">Visit the link to see them</a></div>
 <script>
   let text = "Drag the image back and forth between the two div elements &colon;";
   document.getElementById("demo").innerHTML = text; 

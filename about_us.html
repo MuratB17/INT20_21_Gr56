@@ -20,6 +20,8 @@ body{
   
 }
 
+   
+
 </style>
        <body>
         <div id="emri">
@@ -47,6 +49,8 @@ body{
 <body>
     <h1>About us</h1>
     <p>The idea of this website is to find easily <u>parts</u> of car and know little thing about them.</p>
+    <h1 id="replace">Video for Auto Parts Website </h1>
+ 
 
     <video width="400" controls style="margin: 20px 20px 20px 20px;" >
       <source src="Images/car_parts.mp4" type="video/mp4">
@@ -84,7 +88,7 @@ body{
         <dd>&ndash;you can know about logo of brands</dd>
       </dl>
       <br>
-      <h1>Go at Auto Parts Website <a href="#logo">click here</a></h1>
+      <h1 >Go at Auto Parts Website <a href="#logo">click here</a></h1>
       
     <hr>
     
@@ -95,7 +99,10 @@ body{
         <a href="https://muratb17.github.io/INT20_21_Gr56/" >Auto parts website</a> <abbr title="Auto Parts Website">A.P.W</abbr> <br>
         Komandant Bardhi 57, Kacanik<br>
         Kosova<br>
-        Send email <a href="muratberisha7@gmail.com">here</a>
+        Send email <a href="muratberisha7@gmail.com">here </a></br>
+        Go to login or register:</br>
+        <nav><a href='log_in.html'>Log in</a>|
+        <a href='register.html'>Register</a></nav>
         </address>
         <table style="width:60%">
             <caption style="font-size: 30px;">Time for work &frasl; pause</caption>
@@ -115,5 +122,22 @@ body{
           <button style="margin-left: 50px; font-size: 30px;" onclick="document.getElementById('demo').innerHTML=Date()">The time now is</button>
 
 <p id="demo"></p>
+<script>
+let text = document.getElementById("replace").innerHTML; 
+document.getElementById("replace").innerHTML = text.replace("APW", "Auto Parts Website");
+</script>
+
+<script>
+  let str = "You are in best place";
+ let result = str.match(/best/gi);
+ 
+ console.log(result);
+ </script>
+ <script>
+let re = /hi/i;
+let result = re.test('Hi all!');
+
+console.log(result);
+</script>
 </body>
 </html>

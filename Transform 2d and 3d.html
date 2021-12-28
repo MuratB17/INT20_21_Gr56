@@ -163,8 +163,45 @@
                                 <div class = "normal_div"> Best car is BMW </div>
                                 <div id="rotateZ">Best car is BMW</div>
                             </div>
-                        
-                                      
+
+
+
+ <p>The toExponential() method converts a number into an exponential notation:</p>
+
+ <p id="eks"></p>
+                            
+ <script>
+let num = 5;
+let n = num.toExponential(3);
+ document.getElementById("eks").innerHTML = n;
+ </script>
+<p>The max number in javascript</p>
+<p id="max"></p>
+<script>
+let x = Number.MAX_VALUE;
+document.getElementById("max").innerHTML = x;
+</script>
+<p >Javascript don't know like number(NaN</p>
+<p id="NaN"></p>
+
+<script>
+document.getElementById("NaN").innerHTML = Number.NaN;
+</script>
+<p >The min value in javascript</p>
+<p id="min"></p>
+<script>
+let y = Number.MIN_VALUE;
+document.getElementById("min").innerHTML = y;
+</script>
+<script>
+    var car = ["BMW", 25000, "AUDI", 50000, "Rent", true];
+     
+     //len contains the length of the array
+     var len = car.length;
+     for (var i = 0; i < len; i++)
+         alert(car[i]);
+   </script>
+                          
 </body>
  
 </html>

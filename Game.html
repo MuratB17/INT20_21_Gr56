@@ -1,6 +1,8 @@
 <html lang="en">
 
 <head>
+
+    
     <title>JavaScript Car Game</title>
     <style>
         .startScreen {
@@ -180,12 +182,12 @@
 
     function start() {
         startScreen.classList.add("hide");
-        // gameArea.classList.remove("hide");
+        
         gameArea.innerHTML = "";
         player.start = true;
         player.score = 0;
 
-        //Generating lines
+        
         for (let i = 0; i < 10; i++) {
             let div = document.createElement("div");
             div.classList.add("line");
@@ -196,7 +198,7 @@
 
         window.requestAnimationFrame(playGame);
 
-        //Generate player car
+        
         let car = document.createElement("div");
         car.innerText = "P1";
         car.setAttribute("class", "car");
@@ -205,7 +207,7 @@
         player.x = car.offsetLeft;
         player.y = car.offsetTop;
 
-        //Generate enemy cards
+        
         for (let i = 0; i < 4; i++) {
             let enemy = document.createElement("div");
             enemy.classList.add("enemy");
@@ -226,6 +228,44 @@
 
         return "#" + c() + c() + c();
     }
+</script>
+
+<script>
+    function validateEmail(email) {
+
+        
+        const re = /\S+@\S+\.\S+/g;
+    
+        
+        let result = re.test(email);
+        if (result) {
+            console.log('The email is valid.');
+        }
+        else {
+            let newEmail = prompt('Enter a valid email:');
+            validateEmail(newEmail);
+        }
+    }
+    
+    
+    let email = prompt('Enter an email: ');
+    
+    validateEmail(email);
+</script>
+<script>
+let message = 'Hi, do you want to play? hi, HI...';
+let re = /hi/gi;
+
+let matches = [];
+let match;
+do {
+    match = re.exec(message);
+    if(match) {
+      matches.push(match);
+    }
+} while(match != null)
+
+console.dir(matches);
 </script>
 </body>
 
