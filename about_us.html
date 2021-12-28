@@ -53,24 +53,24 @@ body{
  
 
     <video width="400" controls style="margin: 20px 20px 20px 20px;" >
-      <source src="Images/car_parts.mp4" type="video/mp4">
-      <source src="Images/car_parts.mp4" type="video/ogg">
+      <source src="Images/Video/car_parts.mp4" type="video/mp4">
+      <source src="Images/Video/car_parts.mp4" type="video/ogg">
      
     </video>
     <video width="400" controls style="margin: 20px 20px 20px 20px; ">
-      <source src="Images/car_parts1.mp4" type="video/mp4">
-      <source src="Images/car_parts1.mp4" type="video/ogg">
+      <source src="Images/Video/car_parts1.mp4" type="video/mp4">
+      <source src="Images/Video/car_parts1.mp4" type="video/ogg">
      
     </video>
     <h1>Audio from noise of car</h1>
     <audio controls>
-      <source src="Imges/audio.mp3" type="audio/ogg">
-      <source src="Images/audio.mp3" type="audio/mpeg">
+      <source src="Imges/Audio/audio.mp3" type="audio/ogg">
+      <source src="Images/Audio/audio.mp3" type="audio/mpeg">
    
     </audio>
     <audio controls>
-      <source src="Images/audio1.mp3" type="audio/ogg">
-      <source src="Imagesaudio.mp3" type="audio/mpeg">
+      <source src="Images/Audio/audio1.mp3" type="audio/ogg">
+      <source src="Images/Audio/audio.mp3" type="audio/mpeg">
     
     </audio>
     </h2>
@@ -134,8 +134,9 @@ document.getElementById("replace").innerHTML = text.replace("APW", "Auto Parts W
  console.log(result);
  </script>
  <script>
-let re = /hi/i;
+let re = new RegExp('hi','i');
 let result = re.test('Hi all!');
+
 
 console.log(result);
 </script>

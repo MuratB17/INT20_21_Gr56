@@ -8,6 +8,7 @@ window.location = "index.html";
 return false;
 }
 else{
+    
 attempt --;
 alert("You have left "+attempt+" attempt;");
 // Disabling fields after 3 attempts.
