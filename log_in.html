@@ -15,6 +15,14 @@
     
        </style>
        <script src="login.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script>
+       $(document).ready(function(){
+         $("button").click(function(){
+           $("#gfg").remove();
+         });
+       });
+       </script>
 </head>
  
 <head>
@@ -28,7 +36,17 @@
       
         
   }
-   
+  #gfg{
+  
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+    text-align: center;
+    align-items: center;
+  }
   #parts {
       font-size: 40px;
       text-align: center;
@@ -60,6 +78,7 @@
     text-align: center;
   }
   
+
  
   </style>
 </head>
@@ -93,7 +112,9 @@
   <div id="gfg">
     <div id="parts"> Auto parts Website</div>
       <div id="parts1">A web for parts of car for you!</div>
+      <button id="gfgg">Remove the up element</button>
   </div>
+  
 </body>
 <body>
  
@@ -117,7 +138,7 @@
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label></br>
      
-    <br><keygen name="secure"><button type="submit">Login</button></br>
+    <br><button type="submit">Login</button></br>
 
     <br><span class="psw"><a href="register.html">New Member</a></span></br>
     
@@ -125,18 +146,7 @@
   </div>
         
   </div>
-  <div class="smile">
-    <svg height="200" width="600">
-                <circle id="yellowcircle" cx="50" cy="50" r="50" fill="yellow"/>
-                <circle id="blackcircle" cx="30" cy="30" r="10" fill="black"/>
-                <circle id="blackcircle" cx="70" cy="30" r="10" fill="black"/>
-                <ellipse id="blackellipse" cx="50" cy="75" rx="20" ry="8" fill="black"/>
-                <ellipse id="yellowellipse" cx="50" cy="73" rx="20" ry="8" fill="yellow"/>
-                <g transform='translate(15,65)'>
-                    <path d="M0,0 A40,40 10 0,0 65,0" fill=none stroke=black stroke-width=5 />  
-                </g>
-            </svg>
-    </div>
+ 
  
 </form>
 

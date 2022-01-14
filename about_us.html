@@ -19,6 +19,11 @@ body{
   background-attachment:scroll;
   
 }
+#cordinates{
+  
+  font-size: 30px;
+  
+}
 
    
 
@@ -44,7 +49,29 @@ body{
 </ul>
 </div>
 </div> 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      alert($("#atw").attr("href"));
+    });
+  });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#atw").attr("href", "https://szjmcf.en.made-in-china.com/Solutions/");
+      });
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#btw").click(function(){
+          $("address").append(" <b>We have more than 1000+ parts</b>.");
+        });
+      
+      });
+      </script>
 </head>
 <body>
     <h1>About us</h1>
@@ -64,7 +91,7 @@ body{
     </video>
     <h1>Audio from noise of car</h1>
     <audio controls>
-      <source src="Imges/Audio/audio.mp3" type="audio/ogg">
+      <source src="Images/Audio/audio.mp3" type="audio/ogg">
       <source src="Images/Audio/audio.mp3" type="audio/mpeg">
    
     </audio>
@@ -86,9 +113,14 @@ body{
         <dd>&ndash;you can know about name of brands</dd>
         <dt>Logo</dt>
         <dd>&ndash;you can know about logo of brands</dd>
+        
       </dl>
       <br>
       <h1 >Go at Auto Parts Website <a href="#logo">click here</a></h1>
+      <h1>Links of the autoparts website <a href="https://szjmcf.en.made-in-china.com/" id="atw">here</a></h1>
+      <button>Show link Value</button>
+      <button>Change link Value</button>
+
       
     <hr>
     
@@ -103,7 +135,33 @@ body{
         Go to login or register:</br>
         <nav><a href='log_in.html'>Log in</a>|
         <a href='register.html'>Register</a></nav>
+        <input type="submit" id="btw" value="Add more information">
+
+        
+
         </address>
+    <span id="cordinates">  <p>Click the button to get your coordinates.</p>
+
+        
+        <input type="submit" onclick="getLocation()" value="Try it">
+        <p id="demo"></p>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</span>
         <table style="width:60%">
             <caption style="font-size: 30px;">Time for work &frasl; pause</caption>
             <tr>
@@ -121,7 +179,7 @@ body{
           </table>
           <button style="margin-left: 50px; font-size: 30px;" onclick="document.getElementById('demo').innerHTML=Date()">The time now is</button>
 
-<p id="demo"></p>
+<p id="replace"></p>
 <script>
 let text = document.getElementById("replace").innerHTML; 
 document.getElementById("replace").innerHTML = text.replace("APW", "Auto Parts Website");
@@ -135,10 +193,10 @@ document.getElementById("replace").innerHTML = text.replace("APW", "Auto Parts W
  </script>
  <script>
 let re = new RegExp('hi','i');
-let result = re.test('Hi all!');
+let resulte = re.test('Hi all!');
 
 
-console.log(result);
+console.log(resulte);
 </script>
 </body>
 </html>

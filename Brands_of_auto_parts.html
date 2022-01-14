@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <style>
+     
          .logo-image{
     width: 46px;
     height: 46px;
@@ -25,9 +26,80 @@ a.links:hover{
 a.links:active{
   color: blue;
 }
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #0e63c4;
+  border: solid 1px #c3c3c3;
+}
 
     
        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("a[target='_blank']").hide();
+          });
+        });
+        </script>
+
+
+        
+        <script>
+        $(document).ready(function(){
+          $("article").on({
+            mouseenter: function(){
+              $(this).css("background-color", "lightgray");
+            },  
+            mouseleave: function(){
+              $(this).css("background-color", "lightblue");
+            }, 
+            click: function(){
+              $(this).css("background-color", "yellow");
+            }  
+          });
+        });
+        </script>
+        
+        <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("section").hide("slow", function(){
+              alert("The paragraph is now hidden");
+            });
+          });
+        });
+        </script>
+       
+        <script>
+        $(document).ready(function(){
+          $("h5").click(function(){
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(3000);
+          });
+        });
+        </script>
+        
+        <script> 
+        $(document).ready(function(){
+          $("#panel").click(function(){
+            $("#flip").slideToggle("slow");
+          });
+        });
+        </script>
+        </script>
+        <script> 
+        $(document).ready(function(){
+          $("h3").click(function(){
+            $("span").animate({
+              height: 'toggle'
+            });
+          });
+        });
+        </script> 
+        
 </head>
        <body>
         <div id="emri">
@@ -80,15 +152,17 @@ td, th {
 </head>
 <body>
   <div id="kk">
-  <h1>What Brands of Auto Parts are most popular in world</h1>
-<section><p>There are many companies that produce auto parts, and this is understandable,
+ <div id="panel"><h1>What Brands of Auto Parts are most popular in world</h1></div> 
+<div id="flip"><section><p>There are many companies that produce auto parts, and this is understandable,
    given the huge needs of an increasingly technologically advanced and modern automobile production.</p></section>
+   <button style="background: #0026ff; color: cornsilk;font-size: 20px; ">Hide paragraph</button>
  <article> <p>And yet, among this multitude of companies, there are several that stand out from the rest.
     Some of them manufacture and offer a wide range of automotive parts and components,
      while others have focused on one or more automotive components. However, all of them have one thing in common - 
      their products are in demand because of their high quality and high reliability.
-  </p></article>
-  <p>The Top three car:</p>
+  </p></article></div>
+<h3>Click for animation</h3>
+  <span>  <p>The Top three car:</p>
 
 <p id="de"></p>
 
@@ -96,49 +170,41 @@ td, th {
 const cars = ["Audi", "Mercedes", "BMW"];
 document.getElementById("de").innerHTML = cars;
 </script>
-
-<p>Check the every age at the array > 18 :{ 32,33,16,40 }</p>
-        <p id="chk"></p>
-
-        <script>
-        const ages = [32, 33, 16, 40];
-        document.getElementById("chk").innerHTML = ages.every(checkAge);
         
-        function checkAge(age) {
-          return age > 18;
-        }
-        </script>
-        
-      </div>
+</span>
+      
+<h5 style="font-size: 30px; text-align: center;">Click to fade in/out the image in table</h5>
+
+
 
 <h2 style="text-align: center; font-size: 50px;  color: white;
 text-shadow: 2px 2px 4px #000000;">Top Brands of Auto Parts</h2>
 
-<table>
+<table id="table">
   <tr>
     <th>Name</th>
     <th>Logo</th>
   <tr>
     <td> ACDELCO</td>
-    <td><img src="Images/aldeco.png" alt="Aldeco" style="width:300px;height:150px; border-radius: 50px / 15px;"></td>
+    <td><img src="Images/aldeco.png" alt="Aldeco" id="div1" style="width:300px;height:150px; border-radius: 50px / 15px;"></td>
     
   </tr>
   <tr>
     <td>FEBI BILSTEIN</td>
-    <td><img src="Images/FEBI BILSTEIN.png" alt="Febi Bilstein" style="width:300px;height:150px; "></td>
+    <td><img src="Images/FEBI BILSTEIN.png" alt="Febi Bilstein"  style="width:300px;height:150px; float: center; "></td>
     
   </tr>
   <tr>
     <td>MONREO</td>
-    <td><img src="Images/Monroe.png" alt="Monreo" style="width:300px;height:150px;"></td>
+    <td><img src="Images/Monroe.png" alt="Monreo"  style="width:300px;height:150px;"></td>
   </tr>
   <tr>
     <td>CASTROL</td>
-    <td><img src="Images/castrol.png" alt="castrol" style="width:300px;height:150px;"></td>
+    <td><img src="Images/castrol.png" alt="castrol"  id="div3" style="width:300px;height:150px;"></td>
   </tr>
   <tr>
     <td>CONTINENTAL AG</td>
-    <td><img src="Images/CONTINENTAL AG.png" alt="CONTINENTAL AG" style="width:300px;height:150px;"> </td>
+    <td><img src="Images/CONTINENTAL AG.png" alt="CONTINENTAL AG"  style="width:300px;height:150px;"> </td>
 
   </tr>
   <tr>
@@ -153,14 +219,15 @@ text-shadow: 2px 2px 4px #000000;">Top Brands of Auto Parts</h2>
   </tr>
   <tr>
     <td>MANN-FILTER</td>
-    <td><img src="Images/MANN - FILTER.jpg" alt="MANN-FILTER" style="width:300px;height:150px;"></td>
+    <td><img src="Images/MANN - FILTER.jpg" alt="MANN-FILTER" id="div2"  style="width:300px;height:150px;"></td>
     
   </tr>
 </table>
+
 <p style="font-size:40px;"><bold>For more info about the top brands of auto parts</bold> 
-<a class="links"  href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/" target="_blank">click on the link</a> 
+<a class="links"  href="https://avtotachki.com/en/kakie-marki-avtozapchastej-yavlyayutsya-samymi-populyarnymi-v-mire/"   target="_blank">click on the link</a> 
 
-
+<button style="font-size: 30px;" >Hide link</button>
 </p>
 <div style="text-align: center; font-size: 20px;"><p>Choose your brand</p>
 
