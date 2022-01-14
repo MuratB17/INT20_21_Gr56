@@ -215,32 +215,40 @@ Systems can vary, but they usually are made up of shocks, coil springs, ball joi
           text.replace("try","play");
         }
         </script>
-     <h4>Do you want to count how much you play the game: <output id="result"></output></h4>
+     <h4>Do you want to count how much you play the game: <span id="counter"> # </span></h4>
      
-     <button onclick="startWorker()">Start </button>
-     <button onclick="stopWorker()">Stop </button>
+     <button onclick="counter()">Start Counter</button>
+     <button onclick="longCalculation()">Long Calculation</button>
      
-     <script>
-     var w;
      
-     function startWorker() {
-       if (typeof(Worker) !== "undefined") {
-         if (typeof(w) == "undefined") {
-           w = new Worker("worker.js");
-         }
-         w.onmessage = function(event) {
-           document.getElementById("result").innerHTML = event.data;
-         };
-       } else {
-         document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
-       }
-     }
-     
-     function stopWorker() {
-       w.terminate();
-       w = undefined;
-     }
-     </script>
 </footer>
+<script>
+    let i = 0;
+    let intervalId = null;
+    const counter = () => {
+      if (!intervalId) {
+        intervalId = setInterval(() => {
+          i++;
+          document.getElementById("counter").innerText = i;
+        }, 300);
+      } else {
+        clearInterval(intervalId);
+        i = 0;
+        document.getElementById("counter").innerText = i;
+        intervalId = null;
+      }
+    };
+  </script>
+
+  <!-- longCalculation -->
+  <script>
+    const longCalculation = () => {
+      let i = 0;
+      while (i <= 10000000000) {
+        i++;
+      }
+      alert("Long calculation finished!");
+    };
+  </script>
 </body>
 </html>
